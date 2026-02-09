@@ -1,0 +1,108 @@
+:root {
+
+    --white: #FFFFFF;
+    --black: #000000;
+
+    --gray-950: #2F2F2F;
+    --gray-400: #ADB5BE;
+    --gray-200: #DFDEE0;
+
+    --purple-950: #21092F;
+    --purple-500: rgb(213, 58, 255);
+
+    --orange-400: rgb(255, 131, 74);
+
+    --blue-400: rgb(71, 162, 255);
+
+    --red-400: #FF5050;
+
+    --gradient-primary: linear-gradient(to right, #FFFFFF, #D2D3D9);
+
+    --gradient-secondary: linear-gradient(to right, #6348FE, #610595);
+
+    --font-space-grotesk: "Space Grotesk", sans-serif;
+
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--font-space-grotesk);
+    background-color: var(--white);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Gradiente Mask Background */
+.bg-gradient-mask {
+    width: 100%;
+    height: 24rem;
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+
+    /* Fondo real */
+    background: linear-gradient(135deg,
+            #140a1f 0%,
+            #2a1240 40%,
+            #1a0b2a 70%,
+            #0b0613 100%);
+}
+
+@media(min-width: 1024px){
+    .bg-gradient-mask{
+        width: 48rem;
+        height: 100vh;
+        background: linear-gradient(
+            250deg,
+            #140a1f 0%,
+            #2a1240 40%,
+            #1a0b2a 70%,
+            #0b0613 100%
+        );
+    }
+}
+
+.bg-gradient-mask::before {
+    content: "";
+    position: absolute;
+    inset: -25%;
+    filter: blur(50px);
+    opacity: 0.9;
+    mix-blend-mode: screen;
+    transform: rotate(-15deg);
+    background:
+        radial-gradient(ellipse at 53% 44%, rgba(213, 58, 255, 0.45), transparent 25%),
+        radial-gradient(ellipse at 75% 38%, rgba(255, 131, 74, 0.35), transparent 35%),
+        radial-gradient(ellipse at 35% 45%, rgba(71, 163, 255, 0.581), transparent 40%),
+        radial-gradient(ellipse at 40% 55%, rgba(213, 58, 255, 0.35), transparent 44%);
+}
+
+@media(min-width: 1024px){
+    .bg-gradient-mask::before {
+        transform: rotate(-145deg);
+        inset: -16%;
+        background:
+            radial-gradient(ellipse at 77% 65%, rgba(212, 58, 255, 0.596), transparent 25%),
+            radial-gradient(ellipse at 73% 74%, rgba(255, 131, 74, 0.798), transparent 30%),
+            radial-gradient(ellipse at 74% 46%, rgba(71, 162, 255, 0.45), transparent 41%),
+            radial-gradient(ellipse at 49% 44%, rgba(213, 58, 255, 0.45), transparent 0%);
+        /* radial-gradient(ellipse at 43% 41%, rgba(213, 58, 255, 0.45), transparent 40%),
+        radial-gradient(ellipse at 81% 34%, rgba(255, 131, 74, 0.35), transparent 52%),
+        radial-gradient(ellipse at 19% 49%, rgba(71, 162, 255, 0.45), transparent 40%),
+        radial-gradient(ellipse at 49% 44%, rgba(213, 58, 255, 0.35), transparent 50%); */
+    }
+}
