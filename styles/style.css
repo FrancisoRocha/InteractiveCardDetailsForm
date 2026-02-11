@@ -106,3 +106,20 @@ body {
         radial-gradient(ellipse at 49% 44%, rgba(213, 58, 255, 0.35), transparent 50%); */
     }
 }
+
+/* CARD FRONT */
+
+
+.card__front{
+    width: 28.5rem;
+    height: 15.6rem;
+    padding: 1.6rem;
+    border-radius: 1rem;
+    margin: 12.7rem 0 0 1.7rem;
+    background: 
+        radial-gradient(ellipse at 55% 80%, rgba(71, 163, 255, 0.946), transparent 70%),
+        radial-gradient(ellipse at 76% 24%, rgba(255, 131, 74, 0.968), transparent 60%),
+        radial-gradient(ellipse at 144% 73%, rgba(212, 58, 255, 0.638), transparent 87%),
+        var(--gradient-secondary)
+}
+
