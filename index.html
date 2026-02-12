@@ -1,27 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Interactive card details form</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles/normalize.css">
-  <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
-
-  <div class="container">
-    <!-- Background Gradient Mask -->
-    <div class="bg-gradient-mask"></div>
-    <!-- CARDS -->
-    <div class="container__card">
-      <!-- CARD FRONT -->
-      <div class="card card__front">
-        <div class="card__front__details">
-          <img src="./images/card-logo.svg" alt="card-logo" class="card__front__logo">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Interactive card details form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Background Gradient Mask -->
+      <div class="bg-gradient-mask"></div>
+      <!-- CARDS -->
+      <div class="container__card">
+        <!-- CARD FRONT -->
+        <div class="card card__front">
+          <!-- Óvalos de color -->
+          <div class="card__bg">
+            <div class="card__oval card__oval--blue"></div>
+            <div class="card__oval card__oval--purple"></div>
+            <div class="card__oval card__oval--orange"></div>
+          </div>
+          <div class="card__front__details">
+            <img
+              src="./images/card-logo.svg"
+              alt="card-logo"
+              class="card__front__logo"
+            />
             <div class="card__front__numbers">
               <p class="card__number">
                 <span id="number-1">0000</span>
@@ -40,12 +58,11 @@
                 <span id="month">00</span>/<span id="year">00</span>
               </p>
             </div>
+          </div>
         </div>
+        <!-- CARD BACK -->
+        <div class="card__back"></div>
       </div>
-      <!-- CARD BACK -->
-      <div class="card__back"></div>
     </div>
-  </div>
-
-</body>
+  </body>
 </html>

@@ -62,7 +62,7 @@ body {
             #0b0613 100%);
 }
 
-@media(min-width: 1024px){
+@media(min-width: 1440px){
     .bg-gradient-mask{
         width: 48rem;
         height: 100vh;
@@ -109,17 +109,89 @@ body {
 
 /* CARD FRONT */
 
-
 .card__front{
     width: 28.5rem;
     height: 15.6rem;
     padding: 1.6rem;
     border-radius: 1rem;
     margin: 12.7rem 0 0 1.7rem;
-    background: 
-        radial-gradient(ellipse at 55% 80%, rgba(71, 163, 255, 0.946), transparent 70%),
-        radial-gradient(ellipse at 76% 24%, rgba(255, 131, 74, 0.968), transparent 60%),
-        radial-gradient(ellipse at 144% 73%, rgba(212, 58, 255, 0.638), transparent 87%),
-        var(--gradient-secondary)
+    background: var(--gradient-secondary);
+    position: relative;
+    overflow: hidden;
+}
+
+@media(min-width: 768px){
+    .card__front{
+        width: 44.7rem;
+        height: 24.5rem;
+        margin: 15rem auto 0;
+    }
+}
+
+@media(min-width: 1440px){
+    .card__front{
+        margin: 25rem 0 0 25rem;
+    }
+}
+
+.card__bg{
+    position: absolute;
+    inset: 0;
+}
+
+.card__oval{
+    position: absolute;
+    width: 13.1rem;
+    height: 36.3rem;
+    border-radius: 50%;
+    filter: blur(3rem);
+}
+
+.card__oval--blue{
+    background: var(--blue-400);
+    transform: rotate(45deg);
+    opacity: 0.80;
+    top: -1rem;
+    left: 6rem;
+    z-index: 3;
+}
+
+@media(min-width: 768px){
+    .card__oval--blue{
+        top: 1rem;
+        left: 15rem;
+    }
+}
+
+.card__oval--purple{
+    background: var(--purple-500);
+    transform: rotate(45deg);
+    opacity: 0.80;
+    top: -9rem;
+    left: 9rem;
+    z-index: 1;
+}
+
+@media(min-width: 768px){
+    .card__oval--purple{
+        top: -12rem;
+        left: 18rem;
+    }
+}
+
+.card__oval--orange{
+    background: var(--orange-400);
+    transform: rotate(45deg);
+    opacity: 0.80;
+    top: -21rem;
+    left: 25rem;
+    z-index: 2;
+}
+
+@media(min-width: 768px){
+    .card__oval--orange{
+        top: -14rem;
+        left: 30rem;
+    }
 }
 
