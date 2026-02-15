@@ -30,6 +30,7 @@
         <div class="card card__front">
           <!-- Óvalos de color -->
           <div class="card__bg">
+
             <div class="card__oval card__oval--blue"></div>
             <div class="card__oval card__oval--purple"></div>
             <div class="card__oval card__oval--orange"></div>
@@ -40,29 +41,73 @@
               alt="card-logo"
               class="card__front__logo"
             />
-            <div class="card__front__numbers">
-              <p class="card__number">
-                <span id="number-1">0000</span>
-                <span id="number-2">0000</span>
-                <span id="number-3">0000</span>
-                <span id="number-4">0000</span>
-              </p>
-            </div>
-            <div class="card__front__info">
-              <!-- Nombre -->
-              <p class="card__name">
-                <span class="cardholder-name">Jane Appleseed</span>
-              </p>
-              <!-- Fecha -->
-              <p class="card__date">
-                <span id="month">00</span>/<span id="year">00</span>
-              </p>
+            <div class="card__front__data">
+              <div class="card__front__numbers">
+                <p class="card__number">
+                  <span id="number-1">0000</span>
+                  <span id="number-2">0000</span>
+                  <span id="number-3">0000</span>
+                  <span id="number-4">0000</span>
+                </p>
+              </div>
+              <div class="card__front__info">
+                <!-- Nombre -->
+                <p class="card__name">
+                  <span class="cardholder-name">Jane Appleseed</span>
+                </p>
+                <!-- Fecha -->
+                <p class="card__date">
+                  <span id="month">00</span>/<span id="year">00</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
         <!-- CARD BACK -->
-        <div class="card__back"></div>
+        <div class="card card__back">
+          <!-- DIVIDE BAR -->
+          <div class="divide__bar"></div>
+          <!-- CVC -->
+          <div class="cvc__file">
+            <p class="cvc__number">
+              <span id="cvc">000</span>
+            </p>
+          </div>
+          <img src="./images/lines.svg" alt="" class="card__back__lines" />
+        </div>
       </div>
+      <!-- FORMULARIO DE LAS CARDS -->
+      <form class="container__form--card">
+        <!-- CARDHOLDER NAME -->
+        <div class="form_group">
+          <label for="nombre" class="cardholder__name">Cardholder Name</label>
+          <input type="text" id="nombre" name="nombre" placeholder="e.g. Jane Appleseed">
+        </div>
+        <!-- CARD NUMBER -->
+        <div class="form_group">
+          <label for="cardNumber" class="cardNumber__field">Card Number</label>
+          <input type="text" id="cardNumber" name="cardNumber" placeholder="e.g. 1234 5678 9123 0000">
+        </div>
+        <!-- Exp. Date (MM/YY) -->
+        <div class="form__date-cvc">
+          <div class="dates__month--year">
+            <p class="expireDates__fields">Exp. Date (MM/YY)</p>
+            <!-- MOnTH -->
+            <label for="expire__month" class="expires__month">MM</label>
+            <input type="number" id="expire__month" name="expireDate" placeholder="MM">
+            <!-- YEAR -->
+            <label for="expire__year" class="expires__year">YY</label>
+            <input type="number" id="expire__year" name="expireDate" placeholder="YY">
+          </div>
+            <!-- CVC -->
+          <div class="exp__cvc">
+            <label for="cvc__input" class="cvc__label">CVC</label>
+            <input type="number" id="cvc__input" name="cvc__input" placeholder="e.g. 123">
+          </div>
+        </div>
+        <!-- Botón de envío -->
+        <button type="submit" class="btn__form">Confirm</button>
+      </form>
     </div>
   </body>
 </html>

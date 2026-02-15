@@ -16,7 +16,7 @@
 
     --red-400: #FF5050;
 
-    --gradient-primary: linear-gradient(to right, #FFFFFF, #D2D3D9);
+    --gradient-primary: linear-gradient(to bottom, #FFFFFF, #D2D3D9);
 
     --gradient-secondary: linear-gradient(to right, #6348FE, #610595);
 
@@ -38,11 +38,7 @@ html {
 }
 
 body {
-    font-family: var(--font-space-grotesk);
     background-color: var(--white);
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Gradiente Mask Background */
@@ -100,10 +96,6 @@ body {
             radial-gradient(ellipse at 73% 74%, rgba(255, 131, 74, 0.798), transparent 30%),
             radial-gradient(ellipse at 74% 46%, rgba(71, 162, 255, 0.45), transparent 41%),
             radial-gradient(ellipse at 49% 44%, rgba(213, 58, 255, 0.45), transparent 0%);
-        /* radial-gradient(ellipse at 43% 41%, rgba(213, 58, 255, 0.45), transparent 40%),
-        radial-gradient(ellipse at 81% 34%, rgba(255, 131, 74, 0.35), transparent 52%),
-        radial-gradient(ellipse at 19% 49%, rgba(71, 162, 255, 0.45), transparent 40%),
-        radial-gradient(ellipse at 49% 44%, rgba(213, 58, 255, 0.35), transparent 50%); */
     }
 }
 
@@ -111,13 +103,14 @@ body {
 
 .card__front{
     width: 28.5rem;
-    height: 15.6rem;
+    height: 16rem;
     padding: 1.6rem;
     border-radius: 1rem;
     margin: 12.7rem 0 0 1.7rem;
     background: var(--gradient-secondary);
     position: relative;
     overflow: hidden;
+    z-index: 1;
 }
 
 @media(min-width: 768px){
@@ -194,4 +187,275 @@ body {
         left: 30rem;
     }
 }
+
+/* INFO CARD FRONT */
+
+.card__front__details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.card__front__data{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex: 1;
+    width: 100%;
+    gap: 2rem;
+}
+
+.card__number,
+.card__name,
+.card__date{
+    font-family: var(--font-space-grotesk);
+    font-weight: 400;
+    position: relative;
+    letter-spacing: 2.5px;
+    color: var(--white);
+    text-align: left;
+    z-index: 4;
+}
+
+.card__number{
+    font-size: 1.8rem;
+    line-height: 130%;
+}
+
+@media(min-width: 768px){
+    .card__number{
+        font-size: 2.8rem;
+    }
+}
+
+.card__name,
+.card__date{
+    font-size: .9rem;
+    line-height: 125%;
+}
+
+@media(min-width: 768px){
+    .card__name,
+    .card__date{
+        font-size: 1.4rem;
+    }
+}
+
+.card__front__info{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* CARD BACK */
+.card__back{
+    width: 28.6rem;
+    height: 16rem;
+    background: var(--gradient-primary);
+    position: absolute;
+    top: 4rem;
+    left: 12rem;
+    border-radius: 1rem;
+}
+
+@media(min-width: 768px){
+    .card__back{
+        width: 44.7rem;
+        height: 24.5rem;
+        left: 26rem;
+    }
+}
+
+@media(min-width: 1440px){
+    .card__back{
+        top: 54rem;
+        left: 33rem;;
+    }
+}
+
+.divide__bar{
+    width: 100%;
+    height: 3.4rem;
+    margin-top: 2rem;
+    background-color: var(--gray-950);
+}
+
+@media(min-width: 768px){
+    .divide__bar{
+        height: 4rem;
+    }
+}
+
+.cvc__file{
+    width: 23rem;
+    height: 2.9rem;
+    margin: .5rem auto 0rem;
+    padding: .8rem 1.6rem;
+    border-radius: .4rem;
+    background-color: var(--gray-400);
+}
+
+@media(min-width: 768px){
+    .cvc__file{
+        width: 36rem;
+        height: 3.5rem;
+        margin: 1.5rem auto 0rem;
+    }
+}
+
+@media(min-width: 1440px){
+    .cvc__file{
+        margin: 2.5rem auto 0rem;
+    }
+}
+
+.cvc__number{
+    font-family: var(--font-space-grotesk);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: right;
+    color: var(--white);
+    letter-spacing: 1.25px;
+    line-height: 125%;
+}
+
+.card__back__lines{
+    display: block;
+    margin: 1.5rem auto 0;
+    width: 16rem;
+}
+
+@media(min-width: 768px){
+    .card__back__lines{
+        width: 24rem;
+        margin-top: 2.5rem;
+    }
+}
+
+/* FORMULARIO */
+
+.container__form--card{
+    width: 37rem;
+    height: auto;
+    display: flex;
+    gap: 2.4rem;
+    margin: 12rem 2rem;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media(min-width: 375px){
+    .container__form--card{
+        margin-left: 2rem;
+    }
+}
+
+@media(min-width: 425px){
+    .container__form--card{
+        margin: 12rem auto;
+    }
+}
+
+@media(min-width: 1440px){
+    .container__form--card{
+        margin: -17rem 0 auto 85rem;
+    }
+}
+
+.form__group,
+.exp__cvc {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardholder__name,
+.cardNumber__field,
+.expireDates__fields,
+.expire__month,
+.expire__year,
+.cvc__label{
+    font-family: var(--font-space-grotesk);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--purple-950);
+    text-align: left;
+    line-height: 125%;
+    letter-spacing: 2px;
+}
+
+#nombre,
+#cardNumber{
+    width: 100%;
+    height: 4.5rem;
+    padding: .8rem 1.6rem;
+    border-radius: .8rem;
+    border: 1px solid var(--gray-200);
+    outline: none;
+    font-family: var(--font-space-grotesk);
+}
+
+#nombre::placeholder,
+#cardNumber::placeholder,
+#expire__month::placeholder,
+#expire__year::placeholder,
+#cvc__input::placeholder{
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: left;
+    color: rgba(33, 9, 47, 0.395);
+    font-family: var(--font-space-grotesk);
+}
+
+.form__date-cvc{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.expires__month,
+.expires__year{
+    display: none;
+}
+
+#expire__month,
+#expire__year{
+    width: 8rem;
+    height: 4rem;
+    outline: none;
+    border-radius: .8rem;
+    padding: .8rem 1.6rem;
+    border: 1px solid var(--gray-200);
+    font-family: var(--font-space-grotesk);
+}
+
+#cvc__input{
+    width: 13.5rem;
+    height: 4.5rem;
+    outline: none;
+    border-radius: .8rem;
+    padding: .8rem 1.6rem;
+    border: 1px solid var(--gray-200);
+    font-family: var(--font-space-grotesk);
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 37.5rem;
+    height: 5.3rem;
+    border: none;
+    border-radius: .8rem;
+    color: var(--white);
+    background-color: var(--gray-950);
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 130%;
+    font-family: var(--font-space-grotesk);
+}
+
+
 
