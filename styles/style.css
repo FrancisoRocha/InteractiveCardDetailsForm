@@ -368,6 +368,7 @@ body {
 .exp__cvc {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
 
 .cardholder__name,
@@ -383,6 +384,21 @@ body {
     text-align: left;
     line-height: 125%;
     letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.expireDates__fields{
+    width: 100%;
+}
+
+.dates__month--year{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.msj__error--dates{
+    width: 100%;
 }
 
 #nombre,
@@ -394,6 +410,15 @@ body {
     border: 1px solid var(--gray-200);
     outline: none;
     font-family: var(--font-space-grotesk);
+}
+
+#nombre.error,
+#cardNumber.error,
+#expire__month.error,
+#expire__year.error,
+#cvc__input.error{
+    border: 1px solid var(--red-400);
+    color: var(--red-400);
 }
 
 #nombre::placeholder,
@@ -457,5 +482,75 @@ button{
     font-family: var(--font-space-grotesk);
 }
 
+/*! ERRORES y OCULTAR LO MENSAJES DE ERROR */
+.msj__error--name,
+.msj__error--number,
+.msj__error--dates,
+.msj__error--cvc{
+    line-height: 125%;
+    font-family: var(--font-space-grotesk);
+    text-align: left;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: var(--red-400);
+    display: none;
+}
 
+/*? MESSAGE */
+.message{
+    width: 37rem;
+    height: auto;
+    gap: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 9rem 2rem 0;
+}
+
+@media(min-width: 375px){
+    .message{
+        margin-left: 2rem;
+    }
+}
+
+@media(min-width: 425px){
+    .message{
+        margin: 12rem auto 0;
+    }
+}
+
+@media(min-width: 768px){
+    .message{
+        margin: 12rem auto 0;
+    }
+}
+
+@media(min-width: 1440px){
+    .message{
+        margin: -17rem 0 auto 85rem;
+    }
+}
+
+.message__thanks{
+    font-family: var(--font-space-grotesk);
+    font-size: 2.8rem;
+    font-weight: 500;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 3.5px;
+    color: var(--gray-950);
+}
+
+.message__text{
+    font-family: var(--font-space-grotesk);
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center;
+    color: var(--gray-400);
+}
+
+.hidden{
+    display: none;
+}
 
